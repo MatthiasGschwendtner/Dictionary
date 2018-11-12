@@ -1,9 +1,10 @@
 % force-texpad-dependency: Data.txt
 
-\documentclass[11pt,a4paper]{extarticle}
+\documentclass[11pt]{extarticle}
 
-\usepackage[paperheight=7.76in,
-            paperwidth=10.35in,
+% iPhone 7 Plus
+\usepackage[paperwidth=121.62mm,
+            paperwidth=68.41mm,
             top=-0.5mm,
             left=1mm,
             right=1mm,
@@ -17,12 +18,6 @@
 
 \usepackage[hidelinks]{hyperref}
 
-\usepackage{multicol}
-   \setlength{\columnseprule}{1pt}
-   \renewcommand{\columnseprulecolor}{
-   \color{bluelight}
-   }
-   
 \usepackage{xcolor}
    \definecolor{darken}{RGB}{29,29,29}
    \definecolor{yellow}{RGB}{255,255,0}
@@ -55,9 +50,7 @@
    }
 
 \newcommand*{\myfile}[1]{
-   \begin{multicols}{4}
    \input{#1.txt}
-   \end{multicols}
    }
 
 \begin{document}

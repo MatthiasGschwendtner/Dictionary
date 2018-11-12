@@ -1,4 +1,4 @@
-﻿\mydict{(as if) out of the blue}{(as if) out of the blue}{(wie) aus dem Nichts heraus}{(wie) aus dem Nichts heraus}
+\mydict{(as if) out of the blue}{(as if) out of the blue}{(wie) aus dem Nichts heraus}{(wie) aus dem Nichts heraus}
 \mydict{(as) fit as a fiddle}{(as) fit as a fiddle}{pumperlgesund}{pumperlgesund}
 \mydict{(as) fit as a fiddle}{(as) fit as a fiddle}{fit wie ein Turnschuh}{fit wie ein Turnschuh}
 \mydict{(as) obstinate as a mule}{(as) obstinate as a mule}{(so) starrköpfig wie ein Maultier}{(so) starrköpfig wie ein Maultier}
