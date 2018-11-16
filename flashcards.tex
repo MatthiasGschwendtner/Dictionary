@@ -1,10 +1,10 @@
 % force-texpad-dependency: Data.txt
 
-\documentclass[11pt]{extarticle}
+\documentclass[14pt]{extarticle}
 
 % iPhone 7 Plus
-\usepackage[paperwidth=68.41mm,%
-            paperheight=121.62mm,%
+\usepackage[paperwidth=121.62mm,%
+            paperheight=68.41mm,%
             margin=1mm%
             ]{geometry} 
             
@@ -33,11 +33,11 @@
    }
 
 \newcommand*{\mydict}[4]{%
-   \scriptsize%
+   \small%
    \textcolor{yellow}{%
       \mynumber%
    }%
-   \large~%
+   \Huge~%
    \textcolor{blue}{%
       \href{%
          https://m.dict.cc/?s=#1%
@@ -45,21 +45,21 @@
       \textbf{#2}%
       }%
    }%
-   \newline%
-   \small%
+   \newpage%
+   \normalsize%
    \textcolor{magenta}{%
-      \raisebox{0pt}{%
+      \raisebox{4pt}{%
          \ding{222}%
       }%
     }~%
-   \large%
+   \Huge%
    \textcolor{bluelight}{%
       \href{%
          https://m.dict.cc/?s=#3%
        }%
        {#4}%
        }%
-   \\[3mm]
+   \newpage%
    }
    
 \newcommand*{\darkmode}{%
@@ -77,6 +77,8 @@
 \begin{document}
 
 \darkmode
+
+\centering
 
 \myfile{data}
 

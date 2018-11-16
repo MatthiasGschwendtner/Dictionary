@@ -3,27 +3,33 @@
 \documentclass[11pt]{extarticle}
 
 % iPad Pro 12.9
-\usepackage[paperheight=7.76in,
-            paperwidth=10.35in,
-            top=-0.5mm,
-            left=1mm,
-            right=1mm,
-            bottom=0.5mm]{geometry} 
+\usepackage[paperheight=7.76in,%
+            paperwidth=10.35in,%
+            top=-0.5mm,%
+            left=1mm,%
+            right=1mm,%
+            bottom=0.5mm%
+            ]{geometry} 
             
-\usepackage[sfdefault,lf]{carlito}
+\usepackage{multicol}
+   \setlength{\columnseprule}{1pt}
+   \renewcommand{\columnseprulecolor}{%
+      \color{bluelight}%
+    }            
+            
+\usepackage[sfdefault,%
+            lf%
+            ]{carlito}
 
-\usepackage[ngerman,english]{babel}
+\usepackage[ngerman,%
+            english%
+            ]{babel}
 
 \usepackage{pifont}
 
-\usepackage[hidelinks]{hyperref}
+\usepackage[hidelinks%
+           ]{hyperref}
 
-\usepackage{multicol}
-   \setlength{\columnseprule}{1pt}
-   \renewcommand{\columnseprulecolor}{
-   \color{bluelight}
-   }
-   
 \usepackage{xcolor}
    \definecolor{darken}{RGB}{29,29,29}
    \definecolor{yellow}{RGB}{255,255,0}
@@ -31,40 +37,58 @@
    \definecolor{blue}{RGB}{15,147,239}
    \definecolor{magenta}{RGB}{240,128,128}
    
-\newcounter{Num}\newcommand\mynumber{
-   \stepcounter{Num}\#\,\theNum
+\newcounter{Num}\newcommand\mynumber{%
+   \stepcounter{Num}\#\,\theNum%
    }
 
 \newcommand*{\mydict}[4]{%
-   \scriptsize\textcolor{yellow}{\mynumber}\large~%
+   \scriptsize%
+   \textcolor{yellow}{%
+      \mynumber%
+   }%
+   \large~%
    \textcolor{blue}{%
-   \href{https://m.dict.cc/?s=#1}{%
-   \textbf{#2}}}%
-   \newline\small\textcolor{magenta}{%
-   \ding{222}}~%
+      \href{%
+         https://m.dict.cc/?s=#1%
+      }{%
+      \textbf{#2}%
+      }%
+   }%
+   \newline%
+   \small%
+   \textcolor{magenta}{%
+      \raisebox{0pt}{%
+         \ding{222}%
+      }%
+    }~%
+   \large%
    \textcolor{bluelight}{%
-   \href{https://m.dict.cc/?s=#3}%
-   {#4}}\\[3mm]
+      \href{%
+         https://m.dict.cc/?s=#3%
+       }%
+       {#4}%
+       }%
+   \\[3mm]
    }
    
-\newcommand*{\darkmode}{
-   \pagecolor{darken}
-   \pagestyle{empty}
-   \raggedright
-   \setlength{\parindent}{0pt}
-   \setcounter{Num}{0}
+\newcommand*{\darkmode}{%
+   \pagecolor{darken}%
+   \pagestyle{empty}%
+   \raggedright%
+   \setlength{\parindent}{0pt}%
+   \setcounter{Num}{0}%
    }
 
-\newcommand*{\myfile}[1]{
-   \begin{multicols}{4}
-   \input{#1.txt}
-   \end{multicols}
+\newcommand*{\myfile}[1]{%
+   \begin{multicols}{4}%
+   \input{#1.txt}%
+   \end{multicols}%
    }
 
 \begin{document}
 
 \darkmode
 
-\myfile{Data}
+\myfile{data}
 
 \end{document}
