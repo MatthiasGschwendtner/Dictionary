@@ -1,0 +1,81 @@
+% force-texpad-dependency: masterdata.txt
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+% https://www.dropbox.com/s/2ywl26hf51cnd5d/masterdata.txt?dl=0
+
+\documentclass[11pt]{extarticle}
+
+% iPhone 7 Plus
+\usepackage[paperwidth=121.62mm,%
+            paperheight=68.41mm,%
+            margin=1mm%
+            ]{geometry}  
+            
+\usepackage[ngerman,%
+            english%
+            ]{babel}
+
+\usepackage{pifont}
+
+\usepackage[hidelinks%
+           ]{hyperref}
+
+\usepackage{xcolor}
+   \definecolor{darken}{RGB}{29,29,29}
+   \definecolor{yellow}{RGB}{255,255,0}
+   \definecolor{bluelight}{RGB}{239,244,255}
+   \definecolor{blue}{RGB}{15,147,239}
+   \definecolor{magenta}{RGB}{240,128,128}
+
+\newcommand*{\neu}{%
+   \\
+   \small%
+   \textcolor{yellow}{\ding{118}}%
+   ~\huge%
+   }
+
+\newcommand*{\oder}{%
+   \hspace{-5pt}%
+   \huge%
+   \textcolor{yellow}{/}%
+   \huge%
+   }   
+   
+\newcommand*{\mydict}[2]{%
+   \small%
+   \textcolor{yellow}{\ding{118}}%
+   ~\huge%
+   \textcolor{bluelight}{%
+       #1%
+   }%
+   \newpage%
+   \small%
+   \textcolor{yellow}{\ding{118}}%
+   ~\huge%
+   \textcolor{white}{%
+       #2%
+       }%
+   \newpage%
+   }
+   
+\newcommand*{\darkmode}{%
+   \pagecolor{darken}%
+   \pagestyle{empty}%
+   \raggedright%
+   \setlength{\parindent}{0pt}%
+   }
+
+\newcommand*{\myfile}[1]{%
+   \input{#1.txt}%
+   }
+
+\usepackage{fontspec}
+\setmainfont{Domestic Manners}
+
+\begin{document}
+
+\darkmode
+
+\myfile{masterdata}
+
+\end{document}
