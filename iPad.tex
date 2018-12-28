@@ -40,7 +40,9 @@
    \definecolor{magenta}{RGB}{240,128,128}
    
 \newcounter{Num}\newcommand\mynumber{%
+   \setmainfont{Arial}%
    \stepcounter{Num}\#\,\theNum%
+   \usefont{T1}{wela}{m}{sl}%
    }
 
 \newcommand*{\mydict}[4]{%
@@ -89,8 +91,10 @@
 
 \begin{document}
 
+\usefont{T1}{wela}{m}{sl} % uncomment for carlito font
+
 \darkmode
 
-\myfile{data}
+\myfile{dict/20181116/data}
 
 \end{document}

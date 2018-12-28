@@ -31,7 +31,9 @@
    \definecolor{magenta}{RGB}{240,128,128}
    
 \newcounter{Num}\newcommand\mynumber{%
+   \setmainfont{Arial}%
    \stepcounter{Num}\#\,\theNum%
+   \usefont{T1}{wela}{m}{sl}%
    }
 
 \newcommand*{\mydict}[4]{%
@@ -76,11 +78,9 @@
    \input{#1.txt}%
    }
 
-\usefont{T1}{wela}{m}{sl}
-
 \begin{document}
 
-\usefont{T1}{wela}{m}{sl}
+\usefont{T1}{wela}{m}{sl} % uncomment for carlito font
 
 \darkmode
 
