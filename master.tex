@@ -1,15 +1,15 @@
-% force-texpad-dependency: masterdata.txt
+% force-texpad-dependency: data.txt
 %!TEX TS-program = xelatex
 %!TEX encoding = UTF-8 Unicode
 % https://www.dropbox.com/s/2ywl26hf51cnd5d/masterdata.txt?dl=0
 
-\documentclass[11pt]{extarticle}
+\documentclass[14pt]{extarticle}
 
 % iPhone 7 Plus
 \usepackage[paperwidth=121.62mm,%
             paperheight=68.41mm,%
-            margin=1mm%
-            ]{geometry}  
+            margin=5mm%
+            ]{geometry} 
             
 \usepackage[ngerman,%
             english%
@@ -31,27 +31,32 @@
    \\
    \small%
    \textcolor{yellow}{\ding{118}}%
-   ~\huge%
+   ~\LARGE%
    }
 
-\newcommand*{\oder}{%
+\renewcommand{\or}{%
    \hspace{-5pt}%
-   \huge%
+   \LARGE%
    \textcolor{yellow}{/}%
-   \huge%
+   \LARGE%
    }   
+
+\usepackage{setspace}
+
+\newcommand*{\exm}[1]{\\ \small\setstretch{0}\textcolor{green}{#1}\LARGE}
+   
    
 \newcommand*{\mydict}[2]{%
    \small%
    \textcolor{yellow}{\ding{118}}%
-   ~\huge%
+   ~\LARGE%
    \textcolor{bluelight}{%
        #1%
    }%
    \newpage%
    \small%
    \textcolor{yellow}{\ding{118}}%
-   ~\huge%
+   ~\LARGE%
    \textcolor{white}{%
        #2%
        }%
@@ -68,14 +73,18 @@
 \newcommand*{\myfile}[1]{%
    \input{#1.txt}%
    }
+   
+   
 
-\usepackage{fontspec}
-\setmainfont{Domestic Manners}
+\usepackage[T1]{fontenc}
 
 \begin{document}
+\usefont{T1}{wela}{m}{sl}
+
+
 
 \darkmode
 
-\myfile{masterdata}
+\myfile{data}
 
 \end{document}
